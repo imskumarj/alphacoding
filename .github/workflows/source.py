@@ -24,7 +24,7 @@ def start():
     text.destroy()
     EntryBox.destroy()
     Submit.destroy()
-    Label(text="Obtained Fibonacci series is:",font=("Poppins", 30, "bold"),bg="skyblue").place(x=250,y=150)
+    Label(text= f"Obtained Fibonacci series of {EntryType.get()} elements is:",font=("Poppins", 30, "bold"),bg="skyblue").place(x=250,y=150)
     if EntryType.get() == 0:
         Label(root, text = "EMPTY!", font=("Poppins", 30, "bold"),bg="skyblue").place(x=700,y=350)
     if EntryType.get() == 1:
@@ -32,7 +32,6 @@ def start():
         Label(root, text = elements, font=("Poppins", 30, "bold"),bg="skyblue").place(x=700,y=350)
     if EntryType.get() > 1:
         elements = fib()
-        print(elements)
         result = ''
         for i in range(0,len(elements)):
             if i%6==0 and i!=0:
